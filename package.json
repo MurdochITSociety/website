@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "astro": "^1.2.7"
+  },
+  "devDependencies": {
+    "@littlesticks/odyssey-theme-components": "^0.0.23"
   }
 }
