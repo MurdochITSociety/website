@@ -28,10 +28,10 @@ import Card from '../components/Card.astro';
 					body="Join discord server NOW"
 				/>
 			</ul>
-			<div id="container">
-				<section id="about-us-section">
+			<div class="container">
+				<section class="about-us">
 					<div id="about-us-text">
-						<h2 id="about-us">About Us</h2>
+						<h2>About Us</h2>
 						<p style="font-family: var(--theme-font-family-sans)">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
 							Amet, nisi recusandae? Quidem dignissimos nobis, dicta unde, 
@@ -46,21 +46,62 @@ import Card from '../components/Card.astro';
 					</div>
 				</section>
 			</div>
-			<div id="container">
-				<section id="committee-section">
+			<div class="container">
+				<section>
+					<h2 id="title">Current Committee</h2>
+					<p id="desc" style="font-weight:normal;">Look at this cool placeholder text, and this cool placeholder grid below</p>
+					<p style="text-align: center;">Executive Committee</p>
 					<div>
-						<h2 id="committee">Current Committee</h2>
+						<div id="exec">
+							<div id="person">
+								<img id="face" src="src/assets/orangutan_square.jpg">
+								<p>PRESIDENT</p>
+								<p>monkey 1</p>
+								<p id="note">i love MITS</p>
+							</div>
+							<div id="person">
+								<img id="face" src="src/assets/orangutan_square.jpg">
+								<p>VICE PRESIDENT</p>
+								<p>monkey 2</p>
+								<p id="note">i love MITS</p>
+							</div>
+							<div id="person">
+								<img id="face" src="src/assets/orangutan_square.jpg">
+								<p>VICE PRESIDENT</p>
+								<p>monkey 3</p>
+								<p id="note">i love MITS</p>
+							</div>
+							<div id="person">
+								<img id="face" src="src/assets/orangutan_square.jpg">
+								<p>VICE PRESIDENT</p>
+								<p>monkey 4</p>
+								<p id="note">i love MITS</p>
+							</div>
+						</div>
 					</div>
+					<p style="text-align: center;">Sub Committee</p>
 					<div>
-
+						<div id="sub">
+							<div id="sub-member">person 1</div>
+							<div id="sub-member">person 2</div>
+							<div id="sub-member">person 3</div>
+							<div id="sub-member">person 4</div>
+							<div id="sub-member">person 5</div>
+							<div id="sub-member">person 6</div>
+							<div id="sub-member">person 7</div>
+							<div id="sub-member">person 8</div>
+							<div id="sub-member">person 9</div>
+							<div id="sub-member">person 10</div>
+						</div>
 					</div>
 					
 				</section>
 			</div>
 		</main>
 		<footer>
-			<div>
+			<div class="container">
 				<div>
+					<h2 id="title">Murdoch IT Society</h2>
 					<ul>
 						<a href=""><i class="fa-brands fa-discord"></i></a>
 						<a href=""><i class="fa-brands fa-linkedin-in"></i></a>
@@ -146,6 +187,34 @@ import Card from '../components/Card.astro';
 		font-family: var(--theme-font-family-sans);
 	}
 
+	p
+	{
+		margin: 0px;
+		padding: 0.5rem;
+	}
+
+	#title
+	{
+		padding: 1em 1.5em 0;
+		width: fit-content;
+    	margin: 0;
+    	font-family: var(--theme-font-family-serif);
+    	font-size: var(--font-size-md);
+    	font-weight: bold;
+    	color: inherit;
+	}
+
+	#desc
+	{
+		padding: 1em 1.5em 0;
+		width: fit-content;
+    	margin: 0 0.6rem 1rem;;
+    	font-family: var(--theme-font-family-serif);
+    	font-size: var(--font-size-bg);
+    	font-weight: bold;
+    	color: inherit;
+	}
+
 	#navigation-header
 	{
 		display: grid;
@@ -159,24 +228,19 @@ import Card from '../components/Card.astro';
     	z-index: 100;
 	}
 
-	#container
+	.container
 	{
 		margin: 0 auto;
     	max-width: var(--container-max-width);
     	padding: var(--container-padding);
 	}
 
-	#about-us-section
+	.about-us
 	{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
     	align-items: center;
     	gap: 1rem;
-	}
-
-	#about-us
-	{
-		margin: 0 0 1rem;
 	}
 
 	#about-us-text
@@ -199,10 +263,48 @@ import Card from '../components/Card.astro';
     	border-radius: var(--theme-shape-radius);
 	}
 
+	#exec
+	{
+		padding: 1em 1.5em 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	#person
+	{
+		padding: 1rem 1rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#face
+	{
+		width: 35%;
+    	height: 70%;
+    	max-height: 80vh;
+    	object-fit: cover;
+    	border-radius: var(--theme-shape-radius);
+	}
+
+	#sub-member
+	{
+		text-align: center;
+		padding: 1rem;
+	}
+
+	#note
+	{
+		max-width: 60%;
+	}
+
 	footer
 	{
 		min-height: 40vh;
     	background-color: var(--footer-bg);
     	color: var(--footer-color);
+		padding: 10vh 0 1rem 0;
 	}
 </style>
