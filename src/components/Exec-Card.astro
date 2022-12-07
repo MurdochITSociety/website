@@ -1,0 +1,36 @@
+---
+export interface Props {
+    imagePath: string;
+	title: string;
+	name: string;
+	desc: string;
+}
+
+const { imagePath, title, name, desc } = Astro.props;
+---
+
+<li id="person">
+    <img id="face" src={imagePath}>
+    <p>{title}</p>
+    <p>{name}</p>
+    <p id="note">{desc}</p>
+</li>
+<style>
+	#person
+	{
+		padding: 1rem 1rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+        background-color: rgb(28, 28, 28);
+	}
+
+	#face
+	{
+    	width: 50%;
+        height: 60%;
+	}	
+    
+    #note{ max-width: 60%; }
+</style>
