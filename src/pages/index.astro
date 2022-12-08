@@ -1,58 +1,62 @@
 ---
 import Logo from '../components/Logo.astro';
-import Layout from '../layouts/Layout.astro';
 import ExecCard from '../components/Exec-Card.astro';
 ---
-
-<Layout title="Welcome to Astro.">
-	<header id="navigation-header">
-		<div id="logo">
-			<Logo/>
-		</div>
-		<div id="container">
-			<nav>
-				<ul>
-					<a>Home</a>
-					<a href='#about'>About</a>
-					<a href='#committee'>Committee</a>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<body>
-		<main>
-			<div class="container">
-				<section>
-					<div>
-						<h2>Welcome to the Murdoch IT Society!</h2>
-					</div>
-				</section>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/assets/logo.png" />
+		<title>Murdoch IT Society</title>
+		<script src="https://kit.fontawesome.com/e361a64e1e.js" crossorigin="anonymous"></script>
+		<link href="src/css/style.css" rel="stylesheet">
+	</head>
+	<body class="bg-grey">
+		<header class="sticky top-0 flex-none mx:auto backdrop-blur-sm bg-grey/95">
+			<div class="py-4 px-48 flex justify-between">
+				<div class="flex justify-start py-3">
+					<Logo/>
+				</div>
+				<nav class="items-center w-auto flex">
+					<ul class="flex font-bold text-white font-sans text-xl">
+						<li class="px-4 py-3">Home</li>
+						<li class="px-4 py-3">About</li>
+						<li class="px-4 py-3">Committee</li>
+					</ul>
+				</nav>
 			</div>
-			<div class="container">
-				<section class="about-us" id="about">
-					<div id="about-us-text">
-						<h2>About Us</h2>
-						<p style="font-family: var(--theme-font-family-sans)">
+
+		</header>
+		<main>
+			<section id="welcome-text">
+				<div class="mx-48">
+					<h2 class="font-bold text-white font-sans text-4xl">Welcome to the Murdoch IT Society!</h2>
+				</div>
+			</section>
+			<section id="about-us">
+				<div class="mx-96 my-24 flex justify-between">
+					<div class="flex flex-col justify-center">
+						<h2 class="font-bold text-white font-sans text-4xl py-3">About Us</h2>
+						<p class="text-white font-sans text-xl py-3">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
 							Amet, nisi recusandae? Quidem dignissimos nobis, dicta unde, 
 							aperiam voluptate autem iste reprehenderit, aliquam ducimus illo 
 							ea ipsum qui animi sequi. Numquam.
 						</p>
 					</div>
-					<div id="image">
-						<picture>
-							<img id="mits-logo" src="/assets/logo.png"/>
-						</picture>
-					</div>
-				</section>
-			</div>
-			<div class="container">
-				<section>
-					<h2 class="title" id="committee">Current Committee</h2>
-					<p id="desc" style="font-weight:normal;">Look at this cool placeholder text, and this cool placeholder grid below</p>
-					<p style="text-align: center;">Executive Committee</p>
 					<div>
-						<div id="exec">
+						<img class="object-cover max-h-screen" src="/assets/logo.png"/>
+					</div>				
+				</div>
+			</section>
+			<section id="committee">
+				<div class="mx-48 my-24">
+					<h2 class="font-bold text-white font-sans text-4xl py-3">Current Committee</h2>
+					<p class="text-white font-sans text-xl py-3">Look at this cool placeholder text, and this cool placeholder grid below</p>
+					<div class="flex flex-col">
+						<p class="font-bold text-white font-sans text-3xl py-8 flex justify-center">Executive Committee</p>
+						<div class="mx-24 grid grid-cols-2 gap 4">
 							<ExecCard
 								imagePath="/assets/orangutan_square.jpg"
 								title="PRESIDENT"
@@ -78,211 +82,39 @@ import ExecCard from '../components/Exec-Card.astro';
 								desc="i love MITS"
 							/>
 						</div>
-					</div>
-					<p style="text-align: center;">Sub Committee</p>
-					<div>
-						<div id="sub">
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
-							<p id="sub-member">person 1</p>
+						<div class="mx-24">
+							<p class="font-bold text-white font-sans text-3xl py-8 flex justify-center">Sub Committee</p>
+							<div class="flex flex-col">
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+								<p class="text-white my-4 flex justify-center">FirstName LastName</p>
+							</div>
 						</div>
 					</div>
-					
-				</section>
-			</div>
-		</main>
-		<footer>
-			<div class="container">
-				<div>
-					<h2 class="title">Murdoch IT Society</h2>
-					<ul>
-						<a href="/firstlecture/"><i class="fa-brands fa-discord"></i></a>
-						<a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-						<a href=""><i class="fa-brands fa-instagram"></i></a>
-					</ul>
 				</div>
+			</section>
+		</main>
+		<footer class="h-80 bg-footer">
+			<div class="px-48 py-20 flex flex-col justify-start">
+				<Logo/>
+				<ul class="py-8">
+					<a href="/firstlecture/"><i class="fa-brands fa-discord"></i></a>
+					<a class="px-4" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+					<a href=""><i class="fa-brands fa-instagram"></i></a>
+				</ul>
 			</div>
 		</footer>
 	</body>
-</Layout>
-
+</html>
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #ff1212, #ff8181);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	a
-	{
-		color: inherit;
-		text-decoration: none;
-	}
-
-	main {
-		margin: auto;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-	}
-
-	#navigation-header
-	{
-		padding-right: 13vw;
-		padding-left: 13vw;
-  		position: sticky;
-  		top: 0;
-		display: grid;
-		grid-template-columns: 1fr auto auto;
-		background-color: rgba(34,34,34,0.97);
-	}
-
-	@media screen and (max-width: 800px)
-	{
-		#navigation-header
-		{
-			padding-right: 1rem;
-			padding-left: 1rem;
-		}
-	}
-
-	a
-	{
-		margin-right: 1rem;
-		font-family: var(--theme-font-family-sans);
-	}
-
-	p
-	{
-		margin: 0px;
-		padding: 0.5rem;
-	}
-
-	.title
-	{
-		padding: 1em 1.5em 0;
-		width: fit-content;
-    	margin: 0;
-    	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    	font-size: var(--font-size-md);
-    	font-weight: bold;
-    	color: inherit;
-	}
-
-	#desc
-	{
-		padding: 1em 1.5em 0;
-		width: fit-content;
-    	margin: 0 0.6rem 1rem;;
-    	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    	font-size: var(--font-size-bg);
-    	font-weight: bold;
-    	color: inherit;
-	}
-
-	#logo
-	{
-		display: flex;
-    	align-items: center;
-    	z-index: 100;
-	}
-
-	.container
-	{
-		margin: 0 auto;
-    	max-width: var(--container-max-width);
-    	padding: var(--container-padding);
-	}
-
-	.about-us
-	{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-    	align-items: center;
-    	gap: 1rem;
-	}
-
-	#about-us-text
-	{
-		justify-self: center;
-    	max-width: 25rem;
-	}
-
-	#image
-	{
-		display: flex;
-	}
-
-	#mits-logo
-	{
-		width: 100%;
-    	height: 100%;
-    	max-height: 80vh;
-    	object-fit: cover;
-    	border-radius: var(--theme-shape-radius);
-	}
-
-	#exec
-	{
-		padding: 1em 7em 0;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.3rem;
-	}
-
-	#sub
-	{
-		padding: 1em 7em 0;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1.3rem;
-		background-color: rgb(28, 28, 28);
-	}
-
-	#sub-member
-	{
-		text-align: center;
-		padding: 1rem;
-	}
-
-	footer
-	{
-		min-height: 40vh;
-    	background-color: var(--footer-bg);
-    	color: var(--footer-color);
-		padding: 10vh 10vh 1rem 0;
-	}
+	.fa-discord{color: white;}
+	.fa-linkedin-in{color: white;}
+	.fa-instagram{color: white;}
 </style>
