@@ -1,0 +1,17 @@
+---
+export interface Props {
+    imagePath: string;
+	title: string;
+	name: string;
+	desc: string;
+}
+
+const { imagePath, title, name, desc } = Astro.props;
+---
+
+<li class="m-12 flex flex-col justify-self-center">
+    <img class="object-cover max-w-xs" src={imagePath}>
+    <p class="py-3 text-white font-sans text-2xl flex justify-center">{title}</p>
+    <p class="py-3 text-white font-sans text-xl flex justify-center">{name}</p>
+    <p class="py-3 text-white font-sans text-xl flex justify-center">{desc}</p>
+</li>

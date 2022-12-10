@@ -1,0 +1,9 @@
+---
+export interface Props {
+    firstName: string;
+    lastName: string;
+}
+
+const {firstName, lastName} = Astro.props;
+---
+<p class="text-white my-4 flex justify-center">{firstName} {lastName}</p>
