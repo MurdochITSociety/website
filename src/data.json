@@ -1,0 +1,82 @@
+{
+  "sitesettings":
+  {
+    "title": "Murdoch IT Society"
+  },
+  "header":
+  {
+    "link1": "Home",
+    "link2": "About",
+    "link3": "Committee"
+  },
+  "welcometext":
+  {
+    "welcome": "Welcome to the Murdoch IT Society!",
+    "desc": "We are a student collective formed to pool all our knowledge into one single forum to help better our prospective, current and alumni students. We provide a platform for our students to discuss their work with academic integrity, boost employability and host events."
+  },
+  "about":
+  {
+    "title": "About us",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, nisi recusandae? Quidem dignissimos nobis, dicta unde, aperiam voluptate autem iste reprehenderit, aliquam ducimus illo ea ipsum qui animi sequi. Numquam."
+  },
+  "committee":
+  {
+    "title": "Current Committee",
+    "desc": "Look at this cool placeholder text, and this cool placeholder grid below",
+    "exec":
+    {
+      "title": "Executive Committee",
+      "pres":
+      {
+        "title": "PRESIDENT",
+        "name": "person 1",
+        "desc": "i love MITS"
+      },
+      "vp":
+      {
+        "title": "VICE PRESIDENT",
+        "name": "person 2",
+        "desc": "i love MITS"
+      },
+      "sec":
+      {
+        "title": "SECRETARY",
+        "name": "person 3",
+        "desc": "i love MITS"
+      },
+      "tres":
+      {
+        "title": "TREASURER",
+        "name": "person 4",
+        "desc": "i love MITS"
+      }
+    },
+    "sub":
+    {
+      "m1": 
+      {
+        "name":"person 1"
+      },
+      "m2": 
+      {
+        "name":"person 2"
+      },
+      "m3": 
+      {
+        "name":"person 3"
+      },
+      "m4": 
+      {
+        "name":"person 4"
+      },
+      "m5": 
+      {
+        "name":"person 5"
+      },
+      "m6": 
+      {
+        "name":"person 6"
+      }
+    }
+  }
+}

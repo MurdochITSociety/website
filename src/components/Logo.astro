@@ -1,17 +1,5 @@
-<p class="font-bold text-white font-sans text-2xl">Murdoch IT Society</p>
-<style>
-  .mits-logo 
-  {
-    width: fit-content;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: var(--font-size-md);
-    font-weight: bold;
-    color: inherit;
-  }
-  .mits-logo:hover 
-  {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-</style>
+---
+import json from '../data.json';
+---
+
+<p class="font-bold text-white font-sans text-2xl">{json.sitesettings.title}</p>

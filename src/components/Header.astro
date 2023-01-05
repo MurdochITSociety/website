@@ -1,0 +1,19 @@
+---
+import Logo from '../components/Logo.astro';
+import json from '../data.json';
+---
+
+<header class="sticky top-0 flex-none mx:auto backdrop-blur-sm bg-grey/95">
+  <div class="py-4 px-48 flex justify-between">
+    <div class="flex justify-start py-3">
+      <Logo/>
+    </div>
+    <nav class="items-center w-auto flex">
+      <ul class="flex font-bold text-white font-sans text-xl">
+        <li class="px-4 py-3">{json.header.link1}</li>
+        <li class="px-4 py-3">{json.header.link2}</li>
+        <li class="px-4 py-3">{json.header.link3}</li>
+      </ul>
+    </nav>
+  </div>
+</header>
