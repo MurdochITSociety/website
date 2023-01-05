@@ -1,96 +1,158 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Logo from '../components/Logo.astro';
+import ExecCard from '../components/Exec-Card.astro';
+import Committee from '../components/Committee.astro';
 ---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/assets/logo.png" />
+		<title>Murdoch IT Society</title>
+		<script src="https://kit.fontawesome.com/e361a64e1e.js" crossorigin="anonymous"></script>
+		<link href="src/css/style.css" rel="stylesheet">
+	</head>
+	<body class="bg-grey">
+		<header class="sticky top-0 flex-none mx:auto backdrop-blur-sm bg-grey/95">
+			<div class="py-4 px-48 flex justify-between">
+				<div class="flex justify-start py-3">
+					<Logo/>
+				</div>
+				<nav class="items-center w-auto flex">
+					<ul class="flex font-bold text-white font-sans text-xl">
+						<li class="px-4 py-3">Home</li>
+						<li class="px-4 py-3">About</li>
+						<li class="px-4 py-3">Committee</li>
+					</ul>
+				</nav>
+			</div>
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
-
+		</header>
+		<main>
+			<section id="welcome-text">
+				<div class="mx-48">
+					<h2 class="py-3 font-bold text-white font-sans text-4xl">Welcome to the Murdoch IT Society!</h2>
+					<p class="px-12 py-3 text-white font-sans text-xl">
+						We are a student collective formed to pool all our knowledge into one single forum to help better our prospective, 
+						current and alumni students. We provide a platform for our students to discuss their work with academic integrity, 
+						boost employability and host events.
+					</p>
+				</div>
+			</section>
+			<section id="about-us">
+				<div class="mx-96 my-24 flex justify-between">
+					<div class="flex flex-col justify-center">
+						<h2 class="py-3 font-bold text-white font-sans text-4xl">About Us</h2>
+						<p class="py-3 text-white font-sans text-xl">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+							Amet, nisi recusandae? Quidem dignissimos nobis, dicta unde, 
+							aperiam voluptate autem iste reprehenderit, aliquam ducimus illo 
+							ea ipsum qui animi sequi. Numquam.
+						</p>
+					</div>
+					<div>
+						<img class="object-cover max-h-screen" src="/assets/logo.png"/>
+					</div>				
+				</div>
+			</section>
+			<section id="committee">
+				<div class="mx-48 my-24">
+					<h2 class="py-3 font-bold text-white font-sans text-4xl">Current Committee</h2>
+					<p class="py-3 text-white font-sans text-xl">Look at this cool placeholder text, and this cool placeholder grid below</p>
+					<div class="flex flex-col">
+						<p class="py-8 font-bold text-white font-sans text-3xl flex justify-center">Executive Committee</p>
+						<div class="mx-24 grid grid-cols-2 gap 4">
+							<ExecCard
+								imagePath="/assets/orangutan_square.jpg"
+								title="PRESIDENT"
+								name="monkey 1"
+								desc="i love MITS"
+							/>
+							<ExecCard
+								imagePath="/assets/orangutan_square.jpg"
+								title="VICE PRESIDENT"
+								name="monkey 2"
+								desc="i love MITS"
+							/>
+							<ExecCard
+								imagePath="/assets/orangutan_square.jpg"
+								title="SECRETARY"
+								name="monkey 3"
+								desc="i love MITS"
+							/>
+							<ExecCard
+								imagePath="/assets/orangutan_square.jpg"
+								title="Treasurer"
+								name="monkey 4"
+								desc="i love MITS"
+							/>
+						</div>
+						<div class="mx-24">
+							<p class="py-8 font-bold text-white font-sans text-3xl flex justify-center">Sub Committee</p>
+							<div class="flex flex-col">
+								<Committee
+									firstName="person"
+									lastName="1"
+								/>
+								<Committee
+									firstName="person"
+									lastName="2"
+								/>
+								<Committee
+									firstName="person"
+									lastName="3"
+								/>
+								<Committee
+									firstName="person"
+									lastName="4"
+								/>
+								<Committee
+									firstName="person"
+									lastName="5"
+								/>
+								<Committee
+									firstName="person"
+									lastName="6"
+								/>
+								<Committee
+									firstName="person"
+									lastName="7"
+								/>
+								<Committee
+									firstName="person"
+									lastName="8"
+								/>
+								<Committee
+									firstName="person"
+									lastName="9"
+								/>
+								<Committee
+									firstName="person"
+									lastName="10"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="h-80 bg-footer">
+			<div class="px-48 py-20 flex flex-col justify-start">
+				<Logo/>
+				<ul class="py-8">
+					<a href="/firstlecture/"><i class="fa-brands fa-discord"></i></a>
+					<a class="px-4" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+					<a href=""><i class="fa-brands fa-instagram"></i></a>
+					<a class="px-4" href=""><i class="fa-brands fa-github"></i></a>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	.fa-discord{color: white;}
+	.fa-linkedin-in{color: white;}
+	.fa-instagram{color: white;}
+	.fa-github{color: white;}
 </style>
