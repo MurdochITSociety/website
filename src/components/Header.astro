@@ -3,7 +3,7 @@ import Logo from '../components/Logo.astro';
 import json from '../data.json';
 ---
 
-<header class="sticky top-0 flex-none mx:auto backdrop-blur-sm bg-grey/95">
+<header class="sticky top-0 flex-none mx:auto backdrop-blur-sm bg-grey/95 animate-reveal">
   <div class="py-4 px-48 flex justify-between">
     <div class="flex justify-start py-3">
       <Logo/>
@@ -17,3 +17,23 @@ import json from '../data.json';
     </nav>
   </div>
 </header>
+<script>
+  let header = document.querySelector('header') as HTMLElement;
+  var prevScrollpos = window.pageYOffset;
+
+  window.onscroll = function()
+  {
+    var currentScrollPos = window.pageYOffset;
+    if(prevScrollpos > currentScrollPos)
+    {
+      header.classList.add("animate-reveal");
+      header.classList.remove("animate-hide");
+    }
+    else
+    {
+      header.classList.add("animate-hide");
+      header.classList.remove("animate-reveal");
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>
