@@ -1,16 +1,20 @@
 ---
-import Logo from '../components/Logo.astro';
 ---
 
-<footer class="h-80 bg-footer">
-  <div class="px-48 py-20 flex flex-col justify-start">
-    <Logo/>
-    <ul class="py-8">
-      <a href="/firstlecture/"><i class="fa-brands fa-discord"></i></a>
-      <a class="px-4" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href=""><i class="fa-brands fa-instagram"></i></a>
-      <a class="px-4" href=""><i class="fa-brands fa-github"></i></a>
-    </ul>
+<footer class="h-80 bg-grey2">
+  <div class="px-4 sm:px-12 lg:px-24 xl:px-48 py-12">
+    <h1 class="text-white text-xl font-bold">Murdoch IT Society</h1>
+    <div class="py-4 flex flex-col gap-2">
+      <a class="text-white text-md">Home</a>
+      <a class="text-white text-md">About</a>
+      <a class="text-white text-md">Committee</a>
+    </div>
+    <div class="py-12 flex flex-row gap-4">
+      <a><img src="assets/linkedin.svg" width="24" height="24"/></a>
+      <a><img src="assets/github.svg" width="24" height="24"/></a>
+      <a><img src="assets/discord.svg" width="24" height="24"/></a>
+      <a><img src="assets/instagram.svg" width="24" height="24"/></a>
+    </div>
   </div>
 </footer>
 <style>

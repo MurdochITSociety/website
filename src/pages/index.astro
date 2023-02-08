@@ -1,12 +1,12 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import ExecCard from '../components/Exec-Card.astro';
 import Committee from '../components/Committee.astro';
-import Footer from '../components/Footer.astro';
 import json from '../data.json';
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html class="2xl:text-[20px]" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -14,75 +14,84 @@ import json from '../data.json';
     <title>{json.sitesettings.title}</title>
     <script src="https://kit.fontawesome.com/e361a64e1e.js" crossorigin="anonymous"></script>
   </head>
-  <body class="bg-grey">
-    <main>
+  <body class="bg-grey1 font-sans">
     <Header/>
-      <section id="welcome-text" class="py-48 bg-[url('assets/background.jpg')] md:bg-cover">
-        <div class="mx-96 my-24 flex justify-center">
-          <img class="object-cover max-h-28" src="assets/logo.png"/>
-          <h2 class="py-3 font-bold text-white font-sans text-4xl">{json.sitesettings.title}</h2>
+    <section id="welcome-text" class="relative h-screen bg-[url('assets/background.jpg')] bg-center">
+      <div class="relative flex flex-col md:flex-row gap-4 px-4 sm:px-12 lg:px-24 xl:px-48 h-full items-center justify-center">
+        <div class="self-start md:self-center">
+          <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-3xl sm:text-4xl">{json.sitesettings.title}</h2>
+          <p class="text-center text-white md:text-left text-sm sm:text-xl">{json.welcometext.desc}</p>
         </div>
-      </section>
-      <!--
-      <section id="about-us">
-        <div class="mx-96 my-24 flex justify-between">
-          <div class="flex flex-col justify-center">
-            <h2 class="py-3 font-bold text-white font-sans text-4xl">{json.about.title}</h2>
-            <p class="py-3 text-white font-sans text-xl">{json.about.desc}</p>
+        <img class="self-center max-w-[50%] md:max-w-[40%] lg:max-w-xs order-first md:order-last" src="assets/logo.png"/>
+      </div>
+    </section>
+    <section id="about-us">
+      <div class="flex flex-col justify-centerpx-4 sm:px-12 lg:px-24 xl:px-48 py-12">
+        <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-2xl sm:text-3xl">{json.about.title}</h2>
+        <p class="py-3 text-white font-sans text-center md:text-left text-sm sm:text-xl">{json.about.desc}</p>
+        <p class="py-3 text-white font-sans text-center md:text-left text-sm sm:text-xl">{json.about.descCont}</p>
+        <p class="py-3 text-white font-sans text-center text-sm sm:text-xl">{json.about.discord}</p>
+        <button class="self-center py-1 px-2 text-red1 bg-bd rounded-md border-2 border-red transition duration-250 hover:bg-red2">Join MITS Discord</button>
+      </div>
+    </section>
+    <section id="committee">
+      <div class="px-4 sm:px-12 lg:px-24 xl:px-48 py-12">
+        <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-2xl sm:text-3xl">{json.committee.title}</h2>
+        <p class="py-3 text-white font-sans text-center md:text-left text-sm sm:text-xl">{json.committee.desc}</p>
+        <div class="flex flex-col">
+          <p class="py-8 font-bold text-white text-center font-sans text-xl sm:text-2xl">{json.committee.exec.title}</p>
+          <div class="grid md:grid-cols-2">
+            <ExecCard
+              imagePath="/assets/placeholder-img.jpg"
+              title={json.committee.exec.pres.title}
+              name={json.committee.exec.pres.name}
+              desc={json.committee.exec.pres.desc}
+            />
+            <ExecCard
+              imagePath="/assets/placeholder-img.jpg"
+              title={json.committee.exec.vp.title}
+              name={json.committee.exec.vp.name}
+              desc={json.committee.exec.vp.desc}
+            />
+            <ExecCard
+              imagePath="/assets/placeholder-img.jpg"
+              title={json.committee.exec.sec.title}
+              name={json.committee.exec.sec.name}
+              desc={json.committee.exec.sec.desc}
+            />
+            <ExecCard
+              imagePath="/assets/placeholder-img.jpg"
+              title={json.committee.exec.tres.title}
+              name={json.committee.exec.tres.name}
+              desc={json.committee.exec.tres.desc}
+            />
           </div>
           <div>
-            <img class="object-cover max-h-screen" src="assets/logo.png"/>
-          </div>				
-        </div>
-      </section>
-      <section id="committee">
-        <div class="mx-48 my-24">
-          <h2 class="py-3 font-bold text-white font-sans text-4xl">{json.committee.title}</h2>
-          <p class="py-3 text-white font-sans text-xl">{json.committee.desc}</p>
-          <div class="flex flex-col">
-            <p class="py-8 font-bold text-white font-sans text-3xl flex justify-center">{json.committee.exec.title}</p>
-            <div class="mx-24 grid grid-cols-2 gap 4">
-              <ExecCard
-                imagePath="/assets/logo.png"
-                title={json.committee.exec.pres.title}
-                name={json.committee.exec.pres.name}
-                desc={json.committee.exec.pres.desc}
-              />
-              <ExecCard
-                imagePath="/assets/logo.png"
-                title={json.committee.exec.vp.title}
-                name={json.committee.exec.vp.name}
-                desc={json.committee.exec.vp.desc}
-              />
-              <ExecCard
-                imagePath="/assets/logo.png"
-                title={json.committee.exec.sec.title}
-                name={json.committee.exec.sec.name}
-                desc={json.committee.exec.sec.desc}
-              />
-              <ExecCard
-                imagePath="/assets/logo.png"
-                title={json.committee.exec.tres.title}
-                name={json.committee.exec.tres.name}
-                desc={json.committee.exec.tres.desc}
-              />
-            </div>
-            <div class="mx-24">
-              <p class="py-8 font-bold text-white font-sans text-3xl flex justify-center">Sub Committee</p>
-              <div class="flex flex-col">
-                <Committee name="person 1"/>
-                <Committee name="person 2"/>
-                <Committee name="person 3"/>
-                <Committee name="person 4"/>
-                <Committee name="person 5"/>
-                <Committee name="person 6"/>
+            <p class="py-8 font-bold text-white font-sans text-xl sm:text-2xl flex justify-center">Sub Committee</p>
+            <div class="flex flex-col">
+              <div>
+                <h1 class="text-white text-lg font-bold my-4 flex justify-center">General Committee Members</h1>
+                <Committee name="Placeholder Name"/>
+                <Committee name="Placeholder Name"/>
+              </div>
+              <div>
+                <h1 class="text-white text-lg font-bold my-4 flex justify-center">First Year Representatives</h1>
+                <Committee name="Placeholder Name"/>
+                <Committee name="Placeholder Name"/>
+              </div>
+              <div>
+                <h1 class="text-white text-lg font-bold my-4 flex justify-center">Social Media Manager</h1>
+                <Committee name="Placeholder Name"/>
+              </div>
+              <div>
+                <h1 class="text-white text-lg font-bold my-4 flex justify-center">Events Manager</h1>
+                <Committee name="Placeholder Name"/>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    -->
-    </main>
+      </div>
+    </section>
     <Footer/>
   </body>
 </html>
