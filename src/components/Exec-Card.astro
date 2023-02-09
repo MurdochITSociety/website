@@ -9,9 +9,9 @@ export interface Props {
 const { imagePath, title, name, desc } = Astro.props;
 ---
 
-<li class="m-12 flex flex-col justify-self-center">
-  <img class="object-cover max-w-xs" src={imagePath}>
-  <p class="py-3 text-white font-sans text-2xl flex justify-center">{title}</p>
-  <p class="py-3 text-white font-sans text-xl flex justify-center">{name}</p>
-  <p class="py-3 text-white font-sans text-xl flex justify-center">{desc}</p>
+<li class="w-full flex flex-col justify-self-center bg-grey2 py-4 border-2 border-grey1 rounded-md">
+  <img class="self-center max-w-[35%] rounded-md" src={imagePath}>
+  <p class="pt-2 text-white font-sans font-bold text-xl flex justify-center">{title}</p>
+  <p class="py-2 text-white font-sans text-lg flex justify-center">{name}</p>
+  <p class="py-3 px-8 sm:px-24 md:px-12 lg:px-24 text-white font-sans text-sm flex text-center justify-center">{desc}</p>
 </li>

@@ -17,38 +17,40 @@
   "about":
   {
     "title": "About us",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, nisi recusandae? Quidem dignissimos nobis, dicta unde, aperiam voluptate autem iste reprehenderit, aliquam ducimus illo ea ipsum qui animi sequi. Numquam."
+    "desc": "As the only generalist IT club at Murdoch University, the Murdoch IT Society is comprised of students from a wide range of subdisciplines within the field of technology. We pride ourselves in offering an academic environment for such diverse, yet like-minded individuals to share, collaborate, and assist each other in our personal projects and studies. At present, this environment is largely delivered through the utilisation of a Discord server – though we are working hard to shape MITS into a dynamic and welcoming on-campus presence.",
+    "descCont": "During the growth of our community, our Discord server has developed an atmosphere that provides a supportive, fun, and vibrant location to engage with your fellow students at Murdoch.",
+    "discord": "Join our Discord today to see what MITS has to offer."
   },
   "committee":
   {
-    "title": "Current Committee",
-    "desc": "Look at this cool placeholder text, and this cool placeholder grid below",
+    "title": "Meet the Committee",
+    "desc": "Our Committee members keep MITS ticking, responsible for community management, event organisation and idea realisation",
     "exec":
     {
       "title": "Executive Committee",
       "pres":
       {
-        "title": "PRESIDENT",
-        "name": "person 1",
-        "desc": "i love MITS"
+        "title": "President",
+        "name": "Placeholder Name",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       "vp":
       {
-        "title": "VICE PRESIDENT",
-        "name": "person 2",
-        "desc": "i love MITS"
+        "title": "Vice President",
+        "name": "Placeholder Name",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       "sec":
       {
-        "title": "SECRETARY",
-        "name": "person 3",
-        "desc": "i love MITS"
+        "title": "Secretary",
+        "name": "Placeholder Name",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       },
       "tres":
       {
-        "title": "TREASURER",
-        "name": "person 4",
-        "desc": "i love MITS"
+        "title": "Treasurer",
+        "name": "Placeholder Name",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       }
     },
     "sub":
@@ -78,5 +80,12 @@
         "name":"person 6"
       }
     }
+  },
+  "links":
+  {
+    "linkedin": "",
+    "github": "",
+    "discord": "",
+    "instagram": ""
   }
 }
