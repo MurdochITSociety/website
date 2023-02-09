@@ -17,6 +17,7 @@ import json from '../data.json';
   <body class="bg-grey1 font-sans">
     <Header/>
     <section id="welcome-text" class="relative h-screen bg-[url('assets/background.jpg')] bg-center">
+      <a id="home" class="block relative top-[-50px]"></a>
       <div class="relative flex flex-col md:flex-row gap-4 px-4 sm:px-12 lg:px-24 xl:px-48 h-full items-center justify-center">
         <div class="self-start md:self-center">
           <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-3xl sm:text-4xl">{json.sitesettings.title}</h2>
@@ -25,16 +26,18 @@ import json from '../data.json';
         <img class="self-center max-w-[50%] md:max-w-[40%] lg:max-w-xs order-first md:order-last" src="assets/logo.png"/>
       </div>
     </section>
-    <section id="about-us">
-      <div class="flex flex-col justify-centerpx-4 sm:px-12 lg:px-24 xl:px-48 py-12">
+    <section>
+      <a id="about" class="block relative"></a>
+      <div class="flex flex-col justify-centerpx-4 sm:px-12 lg:px-24 xl:px-48 py-24">
         <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-2xl sm:text-3xl">{json.about.title}</h2>
         <p class="py-3 text-white font-sans text-center md:text-left text-sm sm:text-xl">{json.about.desc}</p>
         <p class="py-3 text-white font-sans text-center md:text-left text-sm sm:text-xl">{json.about.descCont}</p>
-        <p class="py-3 text-white font-sans text-center text-sm sm:text-xl">{json.about.discord}</p>
-        <button class="self-center py-1 px-2 text-red1 bg-bd rounded-md border-2 border-red transition duration-250 hover:bg-red2">Join MITS Discord</button>
+        <p class="py-3 text-white font-sans text-center text-sm sm:text-lg">{json.about.discord}</p>
+        <a href={json.links.discord} target="_blank" class="self-center py-1 px-2 text-red1 bg-bd rounded-md border-2 border-red transition duration-250 hover:bg-red2">Join MITS Discord</a>
       </div>
     </section>
-    <section id="committee">
+    <section>
+      <a id="committee" class="block relative top-[-50px]"></a>
       <div class="px-4 sm:px-12 lg:px-24 xl:px-48 py-12">
         <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-2xl sm:text-3xl">{json.committee.title}</h2>
         <p class="py-3 text-white font-sans text-center md:text-left text-sm sm:text-xl">{json.committee.desc}</p>
