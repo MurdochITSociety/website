@@ -6,5 +6,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://secondoccurrence.github.io/MITSWebsite/",
   base: "/MITSWebsite",
-  integrations: [tailwind()]
+  integrations: [tailwind({
+    config: { applyBaseStyles: false },
+  })]
 });
