@@ -5,8 +5,8 @@ import json from '../data.json';
 <header class="absolute bottom-0 z-20 px-4 sm:px-12 lg:px-24 py-4 flex w-full items-center justify-between">
   <div class="flex w-full justify-between">
     <img class="object-cover h-12" src="logo.png"/>
-    <div id="PhoneMenu" class="flex items-center md:hidden">
-      <button id="menuButton" class="p-2" type="button">
+    <div id="PhoneMenu" class="flex items-center md:hidden active:animate-reveal">
+      <button id="openMenu" class="p-2" type="button">
         <img src="menubar.svg"/>
       </button>
     </div>
@@ -19,23 +19,24 @@ import json from '../data.json';
     </ul>
   </nav>
 </header>
-<div id="ExpandMenu" class="fixed z-30 py-2 px-4 h-screen w-screen flex flex-col items-center bg-grey hidden">
+<div id="ExpandMenu" class="fixed z-30 py-2 px-4 h-screen w-screen flex flex-col items-center bg-grey1 hidden">
   <div class="flex w-full justify-between">
     <img class="object-cover h-12" src="logo.png"/>
-    <button id="menuButton" class="p-2" type="button">
+    <button id="closeMenu" class="p-2" type="button">
       <img src="cross.svg" width="30px" height="30px"/>
     </button>
   </div>
   <nav class="py-16">
     <ul id="MenuItems" class="flex flex-col md:flex-row text-md">
-      <li class="px-4 py-2 inline-block text-white text-center">{json.header.link1}</li>
-      <li class="px-4 py-2 inline-block text-white text-center">{json.header.link2}</li>
-      <li class="px-4 py-2 inline-block text-white text-center">{json.header.link3}</li>
+      <li id="menuButton" class="px-4 py-2 inline-block text-white text-center"><a href="#home">{json.header.link1}</a></li>
+      <li id="menuButton" class="px-4 py-2 inline-block text-white text-center"><a href="#about">{json.header.link2}</a></li>
+      <li id="menuButton" class="px-4 py-2 inline-block text-white text-center"><a href="#committee">{json.header.link3}</a></li>
     </ul>
   </nav>
 </div>
 <script>
   let header = document.querySelector('header') as HTMLElement;
+  let newHeader = document.querySelector('#ExpandMenu') as HTMLElement;
   var userHeight = window.innerHeight - 95;
 
   window.addEventListener('scroll', function()
@@ -46,7 +47,7 @@ import json from '../data.json';
       header.classList.remove("absolute");
       header.classList.add("top-0");
       header.classList.add("fixed");
-      header.classList.add("bg-grey/95");
+      header.classList.add("bg-grey1/95");
       header.classList.add("backdrop-blur-sm");
     }
     else
@@ -55,22 +56,65 @@ import json from '../data.json';
       header.classList.add("absolute");
       header.classList.remove("top-0");
       header.classList.remove("sticky");
-      header.classList.remove("bg-grey/95");
+      header.classList.remove("bg-grey1/95");
       header.classList.remove("backdrop-blur-sm");
     }
   });
 
-  var menuButtons = document.querySelectorAll('#menuButton');
-
-  menuButtons.forEach((button) =>
-  {
-    button.addEventListener('click', () => {
-      document.querySelector('#MainNav')?.classList.toggle('hidden');
+  let openMenu = document.querySelector('#openMenu') as HTMLElement;
+  openMenu.addEventListener('click', () => {
+    if(!(document.body.scrollTop > userHeight || document.documentElement.scrollTop > userHeight))
+    {
+      header.classList.add("animate-reveal");
+    }
+    else
+    {
       document.querySelector('#ExpandMenu')?.classList.toggle('hidden');
       document.body.classList.toggle('h-100');
       document.body.classList.toggle('overflow-hidden');
-    });
+    }
   });
+
+  let closeMenu = document.querySelector('#closeMenu') as HTMLElement;
+  closeMenu.addEventListener('click', () => {
+    if(!(document.body.scrollTop > userHeight || document.documentElement.scrollTop > userHeight))
+    {
+      newHeader.classList.add('animate-hide');
+    }
+    else
+    {
+      document.querySelector('#ExpandMenu')?.classList.toggle('hidden');
+      document.body.classList.toggle('h-100');
+      document.body.classList.toggle('overflow-hidden');
+    }
+  });
+
+  header.addEventListener('animationend', () =>{
+    document.querySelector('#ExpandMenu')?.classList.toggle('hidden');
+    document.body.classList.toggle('h-100');
+    document.body.classList.toggle('overflow-hidden');
+
+    if(!(document.body.scrollTop > userHeight || document.documentElement.scrollTop > userHeight))
+    {
+      if(header.classList.contains('animate-reveal'))
+      {
+        header.classList.remove('animate-reveal');
+      }
+    }
+  });
+  
+  newHeader.addEventListener('animationend', () =>{
+    document.querySelector('#ExpandMenu')?.classList.toggle('hidden');
+    if(newHeader.classList.contains('animate-hide'))
+    {
+      newHeader.classList.remove('animate-hide');
+    }
+  });
+  newHeader.addEventListener('animationstart', () =>{
+    document.body.classList.toggle('h-100');
+    document.body.classList.toggle('overflow-hidden');
+  });
+
   window.onbeforeunload = function ()
   {
     window.scrollTo(0,0);

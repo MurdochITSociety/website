@@ -16,14 +16,22 @@ import json from '../data.json';
   </head>
   <body class="bg-grey1 font-sans">
     <Header/>
-    <section id="welcome-text" class="relative h-screen bg-[url('background.jpg')] bg-center">
+    <section id="welcome-text" class="relative h-screen bg-[url('assets/background.jpg')] bg-center">
       <a id="home" class="block relative top-[-50px]"></a>
-      <div class="relative flex flex-col md:flex-row gap-4 px-4 sm:px-12 lg:px-24 xl:px-48 h-full items-center justify-center">
-        <div class="self-start md:self-center">
-          <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-3xl sm:text-4xl">{json.sitesettings.title}</h2>
-          <p class="text-center text-white md:text-left text-sm sm:text-xl">{json.welcometext.desc}</p>
+      <div class="relative flex flex-col gap-4 px-4 sm:px-12 lg:px-24 xl:px-48 h-[90%] items-center justify-center">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+          <div class="self-start md:self-center">
+            <h2 class="py-3 text-center md:text-left font-bold text-white font-sans text-3xl sm:text-4xl">{json.sitesettings.title}</h2>
+            <p class="text-center text-white md:text-left text-sm sm:text-xl">{json.welcometext.desc}</p>
+          </div>
+          <img class="self-center max-w-[50%] md:max-w-[40%] lg:max-w-xs order-first md:order-last" src="logo.png"/>
         </div>
-        <img class="self-center max-w-[50%] md:max-w-[40%] lg:max-w-xs order-first md:order-last" src="logo.png"/>
+        <div class="flex flex-row gap-4 md:gap-12 md:text-[20px]">
+          <a href={json.links.linkedin} target="_blank"><img src="linkedin.svg" class="w-[24px] md:w-[38px] h-[24px] md:h-[38px]"/></a>
+          <a href={json.links.github} target="_blank"><img src="github.svg" class="w-[24px] md:w-[38px] h-[24px] md:h-[38px]"/></a>
+          <a href={json.links.discord} target="_blank"><img src="discord.svg" class="w-[24px] md:w-[38px] h-[24px] md:h-[38px]"/></a>
+          <a href={json.links.instagram} target="_blank"><img src="instagram.svg" class="w-[24px] md:w-[38px] h-[24px] md:h-[38px]"/></a>
+        </div>
       </div>
     </section>
     <section>

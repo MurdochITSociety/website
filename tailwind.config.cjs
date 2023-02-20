@@ -18,21 +18,29 @@ module.exports = {
     {
       keyframes: 
       {
-        headerHide: 
+        headerBottom: 
         {
-          '0%': { top: '0px' },
-          '100%': { top: '-120px' },
+          '0%': { top: '0%' },
+          '100%': 
+          {
+            top: '85%',
+            display: 'none',
+          },
         },
-        headerReveal:
+        headerTop:
         {
-          '0%': {top: '-120px'},
-          '100%': {top: '0px'},
+          '0%': { bottom: '0%' },
+          '100%': 
+          {
+            bottom: '85%',
+            display: 'none',
+          },
         }
       },
       animation:
       {
-        'hide': 'headerHide 0.2s linear forwards',
-        'reveal': 'headerReveal 0.2s linear forwards',
+        'hide': 'headerBottom 0.2s ease forwards',
+        'reveal': 'headerTop 0.2s ease forwards',
       },
     },
   },
