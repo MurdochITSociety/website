@@ -27,65 +27,71 @@
     "desc": "Our Committee members keep MITS ticking, responsible for community management, event organisation and idea realisation",
     "exec":
     {
-      "title": "Executive Committee",
+      "title": "2022 Executive Committee",
       "pres":
       {
         "title": "President",
-        "name": "Placeholder Name",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "name": "James Morgan",
+        "desc": "I am a motivated, innovative Software Developer with a love for problem solving and constant learning. I have a particular interest in writing efficient, optimised code."
       },
       "vp":
       {
         "title": "Vice President",
-        "name": "Placeholder Name",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "name": "Rachael Stevenson",
+        "desc": "I am a second year Cyber Sec/Internetworking student with a passion for all things IoT. I believe team work makes the dream work and we’d be lost without the help of our dedicated committee. "
       },
       "sec":
       {
         "title": "Secretary",
-        "name": "Placeholder Name",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "name": "Jean Iwanyk",
+        "desc": "I am a Cyber Security and Internetworking graduate who is currently undertaking Doctoral studies in transformative education practices through the use of IT as a pillar for student engagement within Western Australian classrooms. Outside of technologies, I enjoy trying to write my second thesis, a cook book!"
       },
       "tres":
       {
         "title": "Treasurer",
-        "name": "Placeholder Name",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        "name": "Marco Garzon Lara",
+        "desc": "I’m a Computer Science student passionate for building and engineering software. I also have other tech-related interests such as computer hardware, and building PCs."
       }
     },
     "sub":
     {
-      "m1": 
+      "title": "2022 Sub Committee",
+      "socialMediaManager": 
       {
-        "name":"person 1"
+        "title": "Social Media Manager",
+        "name": "Jean Iwanyk"
       },
-      "m2": 
+      "firstYearRep": 
       {
-        "name":"person 2"
+        "title": "First Year Representatives",
+        "name1": "Adam Dabre",
+        "name2": "Josh Smith"
       },
-      "m3": 
+      "eventCoordinator": 
       {
-        "name":"person 3"
+        "title": "Events Coordinator",
+        "name": "Alistair Berry"
       },
-      "m4": 
+      "industryRep": 
       {
-        "name":"person 4"
+        "title": "Graduate/Industry Representatives",
+        "name": "Nicholas Long"
       },
-      "m5": 
+      "generalRep": 
       {
-        "name":"person 5"
-      },
-      "m6": 
-      {
-        "name":"person 6"
+        "title":"General Representatives",
+        "name1": "Damien Bafile",
+        "name2": "Max Cottey",
+        "name3": "Jordan Petrovic",
+        "name4": "Lleyton van Sambeeck"
       }
     }
   },
   "links":
   {
-    "linkedin": "",
-    "github": "",
-    "discord": "",
-    "instagram": ""
+    "linkedin": "https://www.linkedin.com/company/murdoch-it-society/",
+    "github": "https://github.com/MurdochITSociety",
+    "discord": "https://discord.gg/7XptYvt",
+    "instagram": "https://www.instagram.com/mits.club/"
   }
 }
