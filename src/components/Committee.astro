@@ -1,0 +1,8 @@
+---
+export interface Props {
+    name: string;
+}
+
+const {name} = Astro.props;
+---
+<p class="text-white text-md my-4 flex justify-center">{name}</p>

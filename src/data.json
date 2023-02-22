@@ -1,0 +1,97 @@
+{
+  "sitesettings":
+  {
+    "title": "Murdoch IT Society"
+  },
+  "header":
+  {
+    "link1": "Home",
+    "link2": "About",
+    "link3": "Committee"
+  },
+  "welcometext":
+  {
+    "welcome": "Welcome to the Murdoch IT Society!",
+    "desc": "We are a student collective formed to pool all our knowledge into one single forum to help better our prospective, current and alumni students. We provide a platform for our students to discuss their work with academic integrity, boost employability and host events."
+  },
+  "about":
+  {
+    "title": "About us",
+    "desc": "As the only generalist IT club at Murdoch University, the Murdoch IT Society is comprised of students from a wide range of subdisciplines within the field of technology. We pride ourselves in offering an academic environment for such diverse, yet like-minded individuals to share, collaborate, and assist each other in our personal projects and studies. At present, this environment is largely delivered through the utilisation of a Discord server – though we are working hard to shape MITS into a dynamic and welcoming on-campus presence.",
+    "descCont": "During the growth of our community, our Discord server has developed an atmosphere that provides a supportive, fun, and vibrant location to engage with your fellow students at Murdoch.",
+    "discord": "Join our Discord today to see what MITS has to offer."
+  },
+  "committee":
+  {
+    "title": "Meet the Committee",
+    "desc": "Our Committee members keep MITS ticking, responsible for community management, event organisation and idea realisation",
+    "exec":
+    {
+      "title": "2022 Executive Committee",
+      "pres":
+      {
+        "title": "President",
+        "name": "James Morgan",
+        "desc": "I am a motivated, innovative Software Developer with a love for problem solving and constant learning. I have a particular interest in writing efficient, optimised code."
+      },
+      "vp":
+      {
+        "title": "Vice President",
+        "name": "Rachael Stevenson",
+        "desc": "I am a second year Cyber Sec/Internetworking student with a passion for all things IoT. I believe team work makes the dream work and we’d be lost without the help of our dedicated committee. "
+      },
+      "sec":
+      {
+        "title": "Secretary",
+        "name": "Jean Iwanyk",
+        "desc": "I am a Cyber Security and Internetworking graduate who is currently undertaking Doctoral studies in transformative education practices through the use of IT as a pillar for student engagement within Western Australian classrooms. Outside of technologies, I enjoy trying to write my second thesis, a cook book!"
+      },
+      "tres":
+      {
+        "title": "Treasurer",
+        "name": "Marco Garzon Lara",
+        "desc": "I’m a Computer Science student passionate for building and engineering software. I also have other tech-related interests such as computer hardware, and building PCs."
+      }
+    },
+    "sub":
+    {
+      "title": "2022 Sub Committee",
+      "socialMediaManager": 
+      {
+        "title": "Social Media Manager",
+        "name": "Jean Iwanyk"
+      },
+      "firstYearRep": 
+      {
+        "title": "First Year Representatives",
+        "name1": "Adam Dabre",
+        "name2": "Josh Smith"
+      },
+      "eventCoordinator": 
+      {
+        "title": "Events Coordinator",
+        "name": "Alistair Berry"
+      },
+      "industryRep": 
+      {
+        "title": "Graduate/Industry Representatives",
+        "name": "Nicholas Long"
+      },
+      "generalRep": 
+      {
+        "title":"General Representatives",
+        "name1": "Damien Bafile",
+        "name2": "Max Cottey",
+        "name3": "Jordan Petrovic",
+        "name4": "Lleyton van Sambeeck"
+      }
+    }
+  },
+  "links":
+  {
+    "linkedin": "https://www.linkedin.com/company/murdoch-it-society/",
+    "github": "https://github.com/MurdochITSociety",
+    "discord": "https://discord.gg/7XptYvt",
+    "instagram": "https://www.instagram.com/mits.club/"
+  }
+}

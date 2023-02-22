@@ -1,7 +1,10 @@
 import { defineConfig } from "astro/config";
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://mits.club",
-  base: "/",
+  site: "https://secondoccurrence.github.io/MITSWebsite/",
+  base: "/MITSWebsite",
+  integrations: [tailwind()]
 });
